@@ -47,7 +47,7 @@
 
 
 
-# client = RESTClient("hwFj6xOsypub5kCqRKykMRk6tiCzIl8o")
+# client = RESTClient("")
 
 # aggs = []
 # for a in client.list_aggs(
