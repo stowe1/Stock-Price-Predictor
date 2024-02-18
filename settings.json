@@ -3,15 +3,15 @@
 
     "mt5": {
         "server": "server",
-        "login": "login",
+        "username": "username",
         "password": "password",
+        "mt5_path": "mt5_path",
         "symbol": ["symbol"],
         "period": "period",
         "lot": "lot",
         "stoploss": "stoploss",
         "takeprofit": "takeprofit",
-        "magic": "magic",
-        "mt5_path": "mt5_path"
+        "magic": "magic"
     }
 
 
