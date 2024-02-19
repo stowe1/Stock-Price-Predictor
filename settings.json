@@ -3,15 +3,11 @@
 
     "mt5": {
         "server": "server",
-        "username": "username",
-        "password": "password",
-        "mt5_path": "mt5_path",
-        "symbol": ["symbol"],
-        "period": "period",
-        "lot": "lot",
-        "stoploss": "stoploss",
-        "takeprofit": "takeprofit",
-        "magic": "magic"
+        "username": "79293446",
+        "password": "*6TzEpNb",
+        "mt5_path": "C:/Program Files/MetaTrader5/terminal64.exe",
+        "symbol": ["USDJPY.a"],
+        "timeframe": "M30"
     }
 
 
