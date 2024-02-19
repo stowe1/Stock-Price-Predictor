@@ -1,6 +1,10 @@
-import MetaTrader5
+import MetaTrader5 as mt5
+import traceback
 
 
+
+print("MetaTrader5 package author: ",mt5.__author__)
+print("MetaTrader5 package version: ",mt5.__version__)
 
 def start_mt5(mt5_settings):
 
@@ -9,24 +13,28 @@ def start_mt5(mt5_settings):
     server = mt5_settings['mt5']['server']
     mt5_path = mt5_settings['mt5']['mt5_path']
     
+    
+    print(f"Username: {username}, Password: {password}, Server: {server}, Path: {mt5_path}")
     mt5_init = False
     try:
-        mt5_init = MetaTrader5.initialize(
+        mt5_init = mt5.initialize(
+            path=mt5_path,  
             login=username,
             password=password,
             server=server,
-            path=mt5_path                               
+                             
         )
         print(f"MT5 initialized: {mt5_init}")
-    
+        print(traceback.format_exc())
     except Exception as e:
         print(f"Error: {e}")
+        print(traceback.format_exc())
         mt5_init = False
     
     mt5_login = False
     if mt5_init:
         try:
-            mt5_login = MetaTrader5.login(
+            mt5_login = mt5.login(
                 login=username,
                 password=password,
                 server=server
