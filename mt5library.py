@@ -17,13 +17,7 @@ def start_mt5(mt5_settings):
     print(f"Username: {username}, Password: {password}, Server: {server}, Path: {mt5_path}")
     mt5_init = False
     try:
-        mt5_init = mt5.initialize(
-            path=mt5_path,  
-            login=username,
-            password=password,
-            server=server,
-                             
-        )
+        mt5_init = mt5.initialize(path=mt5_path, login=username, password=password, server=server, timeout=1000, portable=False)
         print(f"MT5 initialized: {mt5_init}")
         print(traceback.format_exc())
     except Exception as e:
