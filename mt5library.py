@@ -1,5 +1,9 @@
+from MetaTrader5 import *
 import MetaTrader5 as mt5
 import traceback
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
 
 
@@ -40,3 +44,5 @@ def start_mt5(mt5_settings):
     
     if mt5_init and mt5_login:
         return True
+    
+ 
